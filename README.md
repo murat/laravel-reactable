@@ -9,6 +9,10 @@ Go to your project's root folder and composer require
     $ cd projects/project
     $ composer require muratbsts/laravel-reactable dev-master
 
+Then run this command for publishing migration file
+
+    $ php artisan vendor:publish --provider="Muratbsts\Reactable\Providers\ReactableServiceProvider" --tag="migrations"
+
 Add the service provider to config/app.php file:
 
 ```php
