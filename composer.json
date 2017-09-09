@@ -21,6 +21,13 @@
             "Muratbsts\\Reactable\\": "src/"
         }
     },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Muratbsts\\Reactable\\Providers\\ReactableServiceProvider"
+            ],   
+        }
+    },
     "require": {
         "illuminate/database": "^5.2.0",
         "illuminate/support": "^5.2.0"
