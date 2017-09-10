@@ -67,6 +67,14 @@ Post::find(1)->reaction('claps', User::find(1)); // Reaction, Reactor
 User::find(1)->reaction('claps', Post::find(1)); // Reaction, Reactable
 ```
 
+**You can show reaction tool at the bottom of Reactable like as below (This is testing currently)**
+
+```php
+{!! Reactable::render(Post::find(1)) !!}
+```
+
+![Screenshot](./screenshots/reaction-tool.png)
+
 🎉 Cheers! That's it!
 
 ## License
