@@ -1,11 +1,10 @@
 {
     "name": "muratbsts/laravel-reactable",
-    "description": "Use reactions for your Laravel model like Facebook, without pain",
+    "description": "Easy to use reactions like Slack for your Laravel models, without pain",
     "keywords": [
         "laravel",
         "reactions",
-        "reactable",
-        "facebook-reactions"
+        "reactable"
     ],
     "type": "library",
     "license": "MIT",
