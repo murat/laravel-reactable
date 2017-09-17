@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "ef6ad7580b6e7b3c69d570a1114f2a11",
+    "content-hash": "b050b6dcfcd127ad29e22d6cdda5487e",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -167,12 +167,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/database.git",
-                "reference": "3b34e2b0d1b3c5576c70599e4e0819052841ca2b"
+                "reference": "2656d7a7118a6d9fe1f8c9ed22d65ab609b8ae1d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/database/zipball/3b34e2b0d1b3c5576c70599e4e0819052841ca2b",
-                "reference": "3b34e2b0d1b3c5576c70599e4e0819052841ca2b",
+                "url": "https://api.github.com/repos/illuminate/database/zipball/2656d7a7118a6d9fe1f8c9ed22d65ab609b8ae1d",
+                "reference": "2656d7a7118a6d9fe1f8c9ed22d65ab609b8ae1d",
                 "shasum": ""
             },
             "require": {
@@ -218,7 +218,7 @@
                 "orm",
                 "sql"
             ],
-            "time": "2017-09-06 20:55:33"
+            "time": "2017-09-13 13:37:01"
         },
         {
             "name": "illuminate/support",
@@ -492,12 +492,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/translation.git",
-                "reference": "f9448c88e4fee566626d4bea08948535b714ffd4"
+                "reference": "f0960c5f8357e21b33b448ce07a553976f72f255"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/translation/zipball/f9448c88e4fee566626d4bea08948535b714ffd4",
-                "reference": "f9448c88e4fee566626d4bea08948535b714ffd4",
+                "url": "https://api.github.com/repos/symfony/translation/zipball/f0960c5f8357e21b33b448ce07a553976f72f255",
+                "reference": "f0960c5f8357e21b33b448ce07a553976f72f255",
                 "shasum": ""
             },
             "require": {
@@ -552,7 +552,7 @@
             ],
             "description": "Symfony Translation Component",
             "homepage": "https://symfony.com",
-            "time": "2017-08-29 14:37:52"
+            "time": "2017-09-13 16:05:29"
         }
     ],
     "packages-dev": [],

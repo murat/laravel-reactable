@@ -25,7 +25,7 @@
         "laravel": {
             "providers": [
                 "Muratbsts\\Reactable\\Providers\\ReactableServiceProvider"
-            ],   
+            ]
         }
     },
     "require": {
