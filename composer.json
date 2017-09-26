@@ -30,6 +30,7 @@
     },
     "require": {
         "illuminate/database": "^5.2.0",
+        "illuminate/contracts": "^5.2.0",
         "illuminate/support": "^5.2.0"
     }
 }

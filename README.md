@@ -71,6 +71,9 @@ Post::find(1)->reaction('claps', User::find(1)); // Reaction, Reactor
 
 # Or with Reactable
 User::find(1)->reaction('claps', Post::find(1)); // Reaction, Reactable
+
+# Catch errors with
+User::find(1)->reaction('claps', Post::find(1))->failure();
 ```
 
 🎉 Cheers! That's it!

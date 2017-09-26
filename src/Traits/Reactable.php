@@ -2,54 +2,73 @@
 
 namespace Muratbsts\Reactable\Traits;
 
+use Exception;
 use Muratbsts\Reactable\Models\Reaction;
+use Illuminate\Database\Eloquent\Relations\MorphMany;
 
 trait Reactable
 {
     /**
      * Get Reactable's reactions
-     * @return mixed
      */
-    public function reactions()
+    public function reactions(): MorphMany
     {
         return $this->morphMany('Muratbsts\\Reactable\\Models\\Reaction', 'reactable');
     }
 
     /**
      * Create new reaction
-     * @param      $context
-     * @param null $reactor
-     * @return \Illuminate\Database\Eloquent\Model
+     *
+     * @param  $context
+     * @param  null    $reactor
+     * @return mixed
      */
     public function reaction($context, $reactor = null)
     {
-        $create = array();
+        $reaction = new Reaction();
 
-        $create['reactable_id'] = $this->id;
-        $create['reactable_type'] = get_class($this);
-        $create['context'] = $context;
+        $reaction->reactable_id = $this->id;
+        $reaction->reactable_type = get_class($this);
+        $reaction->context = $context;
 
         /**
          * Save Reactor info if given
          */
         if ($reactor) {
-            $create['reactor_id'] = $reactor->id;
-            $create['reactor_type'] = get_class($reactor);
+            $reaction->reactor_id = $reactor->id;
+            $reaction->reactor_type = get_class($reactor);
         }
 
-        return Reaction::firstOrCreate($create);
+        try {
+            $reaction->save();
+            return true;
+        } catch (\Exception $e) {
+            return $this->error("Could not save reaction because {$e->getMessage()}");
+        }
     }
 
     /**
      * Get Reactable's reaction summary
+     *
      * @return mixed
      */
     public function getReactionSummary()
     {
         return $this->reactions()
-                    ->getQuery()
-                    ->select('context', \DB::raw('count(*) as count'))
-                    ->groupBy('context')
-                    ->get();
+            ->getQuery()
+            ->select('context', \DB::raw('count(*) as count'))
+            ->groupBy('context')
+            ->get();
+    }
+
+    /**
+     * Catch error
+     *
+     * @param  $error string
+     * @return Exception
+     */
+    protected function error($error): Exception
+    {
+        throw new \Exception($error);
     }
 }
